@@ -7,8 +7,15 @@ import org.junit.Test;
 public class TripTest {
 	
 	@Test
+	public void createTrip() {	
+		Trip trip = new Trip("Majowka", "wyjazd rodzinny");
+		assertEquals("Majowka", trip.name);	
+		assertEquals("wyjazd rodzinny", trip.description);	
+	}
+	
+	@Test
 	public void addPhoto() {	
-		Trip trip = new Trip();
+		Trip trip = new Trip("Majowka", "wyjazd rodzinny");
 		Photo photo = new Photo();
 		assertEquals(0, trip.getPhotos().size());	
 		trip.addPhoto(photo);

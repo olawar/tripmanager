@@ -26,7 +26,7 @@ public class TripManagerTest {
 	}
 	
 	@Test
-	public void findTrip() {	
+	public void findTripByDescription() {	
 		TripManager tm = new TripManager();
 		Trip trip = new Trip("Majowka", "wyjazd rodzinny");
 		tm.addTrip(trip);
@@ -35,6 +35,18 @@ public class TripManagerTest {
 		Trip trip2 = new Trip("Swieta", "Skandynawia");
 		tm.addTrip(trip2);
 		assertEquals(trip2, tm.findTrip("Skandynawia"));	
+	}
+	
+	@Test
+	public void findTripByName() {	
+		TripManager tm = new TripManager();
+		Trip trip = new Trip("Majowka", "wyjazd rodzinny");
+		tm.addTrip(trip);
+		Trip trip1 = new Trip("Wakacje", "Grecja");
+		tm.addTrip(trip1);
+		Trip trip2 = new Trip("Swieta", "Skandynawia");
+		tm.addTrip(trip2);
+		assertEquals(trip1, tm.findTrip("Wakacje"));	
 	}
 	
 	@Test

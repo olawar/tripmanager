@@ -13,6 +13,10 @@ public class TripManager {
 	public ArrayList<Trip> getTrips() {
 		return trips;
 	}
+	
+	public void removeTrip(Trip trip) {
+		this.trips.remove(trip);
+	}
 
 
 }

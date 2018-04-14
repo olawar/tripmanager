@@ -14,6 +14,16 @@ public class TripManagerTest {
 		tm.addTrip(trip);
 		assertEquals(1, tm.getTrips().size());	
 	}
+	
+	@Test
+	public void removeTrip() {	
+		TripManager tm = new TripManager();
+		Trip trip = new Trip("Majowka", "wyjazd rodzinny");
+		tm.addTrip(trip);
+		assertEquals(1, tm.getTrips().size());	
+		tm.removeTrip(trip);
+		assertEquals(0, tm.getTrips().size());	
+	}
 
 	
 }

@@ -16,7 +16,7 @@ public class TripTest {
 	@Test
 	public void addPhoto() {	
 		Trip trip = new Trip("Majowka", "wyjazd rodzinny");
-		Photo photo = new Photo();
+		Photo photo = new Photo("z rodzina");
 		assertEquals(0, trip.getPhotos().size());	
 		trip.addPhoto(photo);
 		assertEquals(1, trip.getPhotos().size());	

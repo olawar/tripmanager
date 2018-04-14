@@ -10,4 +10,5 @@ public class PhotoTest {
 		Photo photo = new Photo("Zamek Malbork");
 		assertEquals("Zamek Malbork", photo.comment);	
 	}
+	
 }
